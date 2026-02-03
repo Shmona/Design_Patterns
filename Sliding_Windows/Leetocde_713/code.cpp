@@ -10,23 +10,19 @@ public:
         if (n == 0 || k == 0)
             return 0;
       
+        long long prod = 1;
         int count = 0;
-        for (int i = 0 ; i < n; i++)
+        int left = 0, right = 0;
+        while (right < n)
         {
-            long long prod = 1;
-            if (nums[i] < k)
+            prod *= nums[right];
+            while (left <= right && prod >= k)
             {
-                count++;
-                prod *= nums[i];
-                for ( int j = i + 1; j < n; j++)
-                {
-                    prod *= nums[j];
-                    if (prod < k) 
-                        count++;
-                    else 
-                        break;
-                }
+                prod /= nums[left];
+                left++;
             }
+            count += (right - left + 1);
+            right++;
         }
         return count;
     }
