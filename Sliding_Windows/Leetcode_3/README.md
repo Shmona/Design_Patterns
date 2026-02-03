@@ -25,3 +25,9 @@ Given a string s, find the length of the longest substring without duplicate cha
 
 - 0 <= s.length <= 5 * 10^4
 - s consists of English letters, digits, symbols and spaces.
+
+## Sliding window idea 
+- Assume a window s[left .. right].
+- Expand the window by moving right one step at a time through the string.
+- If the window ever contains a duplicate character => shrink it from the left by moving left forward until the window is valid again.
+- At every step, if the window has no duplicates, update the answer with its size: right - left + 1.
