@@ -3,7 +3,7 @@ Given an integer array nums consisting of n elements, and an integer k.
 
 Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
 
-- **Example 1:**
+**Example 1:**
   
     Input: nums = [1,12,-5,-6,50,3], k = 4
   
@@ -11,7 +11,7 @@ Find a contiguous subarray whose length is equal to k that has the maximum avera
   
     Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
 
-- **Example 2:**
+**Example 2:**
   
     Input: nums = [5], k = 1
   
@@ -20,5 +20,5 @@ Find a contiguous subarray whose length is equal to k that has the maximum avera
 Constraints:
 ==============================
 - n == nums.length
-- 1 <= k <= n <= 105
-- -104 <= nums[i] <= 104
+- 1 <= k <= n <= 10^5
+- -10^4 <= nums[i] <= 10^4
