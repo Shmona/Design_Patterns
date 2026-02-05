@@ -27,3 +27,11 @@ Given an array of positive integers nums and a positive integer target, return t
  
 
 Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).
+
+## Approach 
+- Maintain a window [left, right] and its running sum.
+- Expand the window by moving right forward and adding nums[right] to sum.
+- Whenever the window sum becomes ≥ target, shrink it from the left to find the shortest possible window that still satisfies the condition:
+        - Update the answer with the current window length.
+        - Subtract nums[left] from sum and increment left.
+- Continue until right has scanned the entire array.
