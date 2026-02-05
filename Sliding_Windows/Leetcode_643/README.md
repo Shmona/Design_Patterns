@@ -17,8 +17,17 @@ Find a contiguous subarray whose length is equal to k that has the maximum avera
   
     Output: 5.00000
  
-Constraints:
-==============================
+## Constraints:
 - n == nums.length
 - 1 <= k <= n <= 10^5
 - -10^4 <= nums[i] <= 10^4
+
+
+## Approach
+- Maintain a window of size k.
+- iterate over given array:
+    - Add the current element to the sum.
+    - Once filled the first k elements (i >= k-1), window is filled:
+      - Update the best sum (ans) with the current window sum.
+      - Slide the window by removing the element (leftmost (nums[i - k + 1]).
+- Return the maximum average is (ans / k) as a double.
