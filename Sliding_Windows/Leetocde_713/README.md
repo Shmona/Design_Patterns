@@ -24,3 +24,10 @@ Given an array of integers nums and an integer k, return the number of contiguou
 - 1 <= nums.length <= 3 * 10^4
 - 1 <= nums[i] <= 1000
 - 0 <= k <= 10^6
+
+## Approach 
+- Maintain a window [left, right] such that the product of all elements in this window is < k.
+- Expand right step by step, multiplying prod by nums[right].
+- If the product becomes >= k, shrink from the left (divide by nums[left] and move left forward) until the window again satisfies prod < k.
+- For each position of right, once the window is valid, all subarrays ending at right and starting anywhere from left to right are valid.
+- That adds (right - left + 1) new subarrays to the count.
