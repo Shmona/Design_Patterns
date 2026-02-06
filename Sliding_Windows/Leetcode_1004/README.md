@@ -31,7 +31,6 @@ Given a binary array nums and an integer k, return the maximum number of consecu
 
 **Option 2: Counting no. of ones in the  sliding window**
   - Maintain a window [left, right] and count the number of ones till (window_size - onecount) <= k
-  - Store ans = max(ans, onecount)
   - when (window_size - onecount) > k:
     - If nums[left] == 1, decrement onecount
     - shrink the window by removing leftmost element
