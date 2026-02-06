@@ -23,3 +23,15 @@ Given two strings s and p, return an array of all the start indices of p's anagr
 
 -  1 <= s.length, p.length <= 3 * 10^4
 -  s and p consist of lowercase English letters.
+
+## Approach (Sliding Window + Frequency Count)
+- Build a frequency map of characters in p → m1.
+- Sliding window over s
+    - Use two pointers left and right to maintain a window of size at most |p| over s. Keep a frequency map of the window → m2.
+- Track exact matches via count
+    - Maintain a count of how many distinct characters currently have exact matching frequency between m2 and m1.
+- When window size equals |p|
+    - If count == m1.size() (i.e., all distinct characters match), then the window is an anagram → push left into res.
+- Slide the window
+    - Add s[right] (expand right)
+    - If window exceeds length |p|, remove s[left] (shrink left) and adjust count and m2.
