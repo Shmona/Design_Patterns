@@ -22,9 +22,17 @@ Given a binary array nums and an integer k, return the maximum number of consecu
 - 0 <= k <= nums.length
 
 ## Approach (Sliding Window + Max frequency)
+**Option 1 :  Counting no. of zeros in the  sliding window**
   - Maintain a window [left, right] and count the number of zeros till zerocount <= k
   - when zerocount > k:
     - If nums[left] == 0, decrement zerocount
     - shrink the window by removing leftmost element
-   
+  - ans = max(ans, window_size) where window_size = right - left + 1
+
+**Option 2: Counting no. of ones in the  sliding window**
+  - Maintain a window [left, right] and count the number of ones till (window_size - onecount) <= k
+  - Store ans = max(ans, onecount)
+  - when (window_size - onecount) > k:
+    - If nums[left] == 1, decrement onecount
+    - shrink the window by removing leftmost element
   - ans = max(ans, window_size) where window_size = right - left + 1
