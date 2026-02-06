@@ -42,8 +42,6 @@ public:
             if(nums[right])
                 ones_count++;
 
-            max_count = max(max_count, ones_count);
-
             while (right - left + 1 - ones_count > k)
             {
                 if (nums[left])
