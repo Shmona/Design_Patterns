@@ -21,3 +21,13 @@ Return the length of the longest substring containing the same letter you can ge
 - 1 <= s.length <= 10^5
 - s consists of only uppercase English letters.
 - 0 <= k <= s.length
+
+
+## Approach : (Sliding window + Max Frequency)
+- Maintain a window [left, right], frequency array of size 26 to count uppercase characters in the current window as index[s[right] - 'A']
+- Maintain the maximum frequency of any single character seen in the window so far i.e max_count = max(max_count, index[ch])
+- Expand the window by moving right and updating character counts
+- If the number of replacements needed exceeds k i.e  ( window_size - max_count > k )
+   - Decrease the count of s[left]
+   - Shrink the window by moving left
+- Update ans = max(ans, window_size)
