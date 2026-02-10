@@ -36,10 +36,61 @@
 **Example Problems:**
 
 1. Pair with target sum (sorted array)
+   ``` cpp
+   vector<int> pairSum(vector<int> &v, int target)
+   {
+       int n = v.size();
+       int left = 0, right = n - 1;
+       while (left < right)
+       {
+           int sum = v[left]+v[right];
+           if (sum == target)
+               return {left], right};
+           else if ( sum < target )
+               left++;
+           else
+               right--;
+       }
+       return {-1, -1};
+   }
+   ```
 2. Reverse array/string
+   ``` cpp
+   void ReverseString (string &s)
+   {
+       int n = s.length();
+       if (n <= 1)
+           return;
+       int left = 0, right = n-1;
+       while (left < right)
+       {
+           swap(s[left], s[right]);
+           left++;
+           right--;
+       }
+   }
+   ```
 3. Check palindrome
+   ``` cpp
+   bool isPalindrome (string &s)
+   {
+       int n = s.length();
+       if (n <= 1)
+           return true;
+   
+       int left = 0, right = n-1;
+       while (left < right)
+       {
+           if(s[left] != s[right])
+               return false;
+           left++;
+           right--;
+       }
+       return true;
+   }
+   ```
 
-### Same Direction Pointers :  Both pointers move forward
+### 2. Same Direction Pointers :  Both pointers move forward
 
 **Example Problems:**
 
@@ -47,7 +98,7 @@
 2. Move zeros to end
 3. Detect cycle (fast & slow pointer)
 
-### Fast & Slow Pointer (Tortoise–Hare)   :  One pointer moves faster than the other
+### 3. Fast & Slow Pointer (Tortoise–Hare)   :  One pointer moves faster than the other
 
 **Example Problems:**
 
