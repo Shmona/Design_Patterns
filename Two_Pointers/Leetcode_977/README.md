@@ -22,3 +22,16 @@ Given an integer array nums sorted in non-decreasing order, return an array of t
     Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
 
 ## Approach
+- Maintain two pointers pointing to extremes left => 0 and right => n - 1 and pointer pointing to resultant array's right extremen k => n-1
+- Traverse the array from both end and keep comapring the abs(left element)  and abs( right element)
+    - if abs(left element) <  abs( right element)
+      
+          => implies that right's sqaure also be greater than left's square
+          => place right's sqaure in res[k++]
+          => move the right pointer (right--) as nums[right]  been processed
+      
+    - else
+       
+          => implies that left's sqaure is greater than right's square
+          => place left's sqaure in res[k++]
+          => move the left pointer (left++)  as nums[left]  been processed 
