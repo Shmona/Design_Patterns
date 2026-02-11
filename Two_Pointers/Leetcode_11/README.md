@@ -26,7 +26,7 @@ Notice that you may not slant the container.
 - Traverse through the array from left to right ( left => 0 , right => n-1)
 - compute area = (right - left) * min(height[left], height[right])
 
-      : move left pointer if height[left] < height[right]
-      : move right pointer if height[left] > height[right]
-      : move both pointers if height[left] == height[right]
+      : move left pointer if height[left] < height[right] as  height[left]  is already accounted to compute area
+      : move right pointer if height[left] > height[right] as  height[right]  is already accounted to compute area
+      : move both pointers if height[left] == height[right] as  both have been already accounted to compute area
 - Keep storing the maximum area as result
