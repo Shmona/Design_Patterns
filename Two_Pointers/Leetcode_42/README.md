@@ -45,11 +45,11 @@ Given n non-negative integers representing an elevation map where the width of e
     
         if height[left] < height[right], 
             update leftmax = max (leftmax, height[left])
-            ans = leftmax - height[left]
+            ans += leftmax - height[left]
             move left pointer 
 
         if height[left] > height[right], 
             update rightmax = max (rightmax, height[right])
-            ans = rightmax - height[right]
+            ans += rightmax - height[right]
             move right pointer 
 - return ans
