@@ -161,13 +161,12 @@ Examples:
 - **Leetcode 154** (Find Minimum in Rotated Sorted Array II) : Rotated sorted array
 - **Leetcode 34** (Find First and Last Position of Element in Sorted Array)  : First / Last Occurrence
   
-***(Extremely important : Binary Search on Answer )**
+**(Extremely important : Binary Search on Answer )**
 - **Leetcode 875** (Koko Eating Bananas)  : Binary Search on Answer
 - **Leetcode 1011** (Capacity To Ship Packages Within D Days) : Binary Search on Answer
 - **Leetcode 1482** (Minimum Number of Days to Make m Bouquets) : Binary Search on Answer
 - **Leetcode 1283** (Find the Smallest Divisor Given a Threshold) : Binary Search on Answer
 - **Leetcode 410** (Split Array Largest Sum) : Binary Search on Answer
-
 - **Leetcode 74** (Search a 2D Matrix) :  Matrix Binary Search
 - **Leetcode 240** (Search a 2D Matrix II) :  Matrix Binary Search
 
