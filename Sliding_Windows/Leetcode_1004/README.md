@@ -1,4 +1,4 @@
-# Problem Statement
+# Problem Statement  :  Max Consecutive Ones III
 Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.
 
 **Example 1:**
@@ -23,6 +23,8 @@ Given a binary array nums and an integer k, return the maximum number of consecu
 
 ## Approach (Sliding Window + Max frequency)
 **Option 1 :  Counting no. of zeros in the  sliding window**
+- Solution Link :  https://leetcode.com/problems/max-consecutive-ones-iii/submissions/1910438058/
+  
   - Maintain a window [left, right] and count the number of zeros till zerocount <= k
   - when zerocount > k:
     - If nums[left] == 0, decrement zerocount
@@ -30,6 +32,8 @@ Given a binary array nums and an integer k, return the maximum number of consecu
   - ans = max(ans, window_size) where window_size = right - left + 1
 
 **Option 2: Counting no. of ones in the  sliding window**
+- Solution Link : https://leetcode.com/problems/max-consecutive-ones-iii/submissions/1910497061/
+
   - Maintain a window [left, right] and count the number of ones till (window_size - onecount) <= k
   - when (window_size - onecount) > k:
     - If nums[left] == 1, decrement onecount
