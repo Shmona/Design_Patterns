@@ -33,7 +33,7 @@ You must write an algorithm with O(log n) runtime complexity.
 - Save the index of last occurrence of target
 
 
-### Binary Search  TC = O(N) , SC = O(1)
+### Binary Search  TC = O(Log N) , SC = O(1)
 - idea is to retrive first and last occurrence of target in the given array using binary search algorithm. 
 
 - First occurrence:
