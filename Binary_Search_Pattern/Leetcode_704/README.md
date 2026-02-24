@@ -1,5 +1,6 @@
-# Problem Statement 
-Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+# Problem Statement : Binary Search
+Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. 
+If target exists, then return its index. Otherwise, return -1.
 
 You must write an algorithm with O(log n) runtime complexity.
 
@@ -22,7 +23,9 @@ You must write an algorithm with O(log n) runtime complexity.
 - nums is sorted in ascending order.
 
 ## Approach 
-**Using Binary Search  TC = O( N LogN), SC = O(1)**
+### Using Binary Search  TC = O( N LogN), SC = O(1)
+- Solution Link :  https://leetcode.com/problems/binary-search/submissions/1922444598/
+  
 - Take two pointers pointing to extreme ends low => 0, high => n-1
 - while ( low <= high):
         - compute mid and Compare the middle element with the target:
