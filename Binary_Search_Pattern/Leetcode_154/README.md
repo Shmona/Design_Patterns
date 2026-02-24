@@ -1,4 +1,4 @@
-# Problem Statement 
+# Problem Statement : Find Minimum in Rotated Sorted Array II
 Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,4,4,5,6,7] might become:
 
     [4,5,6,7,0,1,4] if it was rotated 4 times.
@@ -35,6 +35,7 @@ You must decrease the overall operation steps as much as possible.
       - Take care of Duplicates too in every comparision case
 
 **Naive Solution : TC = O(N), O(1)**
+- Solution Link : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/submissions/1928480282/
 
 - if n == 1 (base case) : return nums[0]
 - identify whether array is rotated or not by comparing first and last element
@@ -46,7 +47,8 @@ You must decrease the overall operation steps as much as possible.
     - Else return nums[0]  as array is same as original after rotation
 
 **Using Binary Search TC = O(Log N) SC = O(1)**
-
+- Solution Link : https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/submissions/1928472835/
+  
 - Maintain two pointers pointing to extreme ends low => 0 , high => n - 1
 - While ( low < high ) :
 
