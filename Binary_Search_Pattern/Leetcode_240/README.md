@@ -1,4 +1,4 @@
-# Problem Statement 
+# Problem Statement :  Search a 2D Matrix II
 Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix. This matrix has the following properties:
 
 Integers in each row are sorted in ascending from left to right.
@@ -26,6 +26,8 @@ Integers in each column are sorted in ascending from top to bottom.
 
 ## Approach 
 ### straicase top-right search TC = O(row + col), SC = O(1)
+- Solution Link : https://leetcode.com/problems/search-a-2d-matrix-ii/submissions/1926660196/
+  
 - starts from top-right element => matrix[0][col-1]  i.e r = 0 , c = col - 1
 - while  r < row  && c >= 0 :
 
@@ -35,6 +37,8 @@ Integers in each column are sorted in ascending from top to bottom.
 
 
 ### straicase left- bottom search TC = O(row + col), SC = O(1)
+- Solution Link : https://leetcode.com/problems/search-a-2d-matrix-ii/submissions/1926662719/
+  
 - starts from left-bottom element => matrix[row-1][0]  i.e r = row - 1 , c = 0
 - while  r >= 0  && c < col :
 
@@ -43,6 +47,8 @@ Integers in each column are sorted in ascending from top to bottom.
       => if matrix[r][c] >  target : Target can't be in the search row to move to next (up) row. => r--
 
 ### Binary Search per row TC = O(row Log(col)), SC = O(1)
+- Solution Link : https://leetcode.com/problems/search-a-2d-matrix-ii/submissions/1926694528/
+
 - traverse the matrix per row, i => 0 to row - 1
 
       - if target > matrix[i][col-1]  or target < matrix[i][0]   :  skip this row
