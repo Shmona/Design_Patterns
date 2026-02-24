@@ -1,4 +1,4 @@
-# Problem Statement
+# Problem Statement : Guess Number Higher or Lower
 We are playing the Guess Game. The game is as follows:
 - I pick a number from 1 to n. You have to guess which number I picked (the number I picked stays the same throughout the game).
 
@@ -33,6 +33,8 @@ We are playing the Guess Game. The game is as follows:
 
 ## Approach 
 **using binary Search TC = O(Log N), SC = O(1)**
+- Solution Link :  https://leetcode.com/problems/guess-number-higher-or-lower/submissions/1928076535/
+  
 - Take two pointers to define the extremes of possible range of numbers to be picked,  low = 1, high = n
 - while low <= high :
   
