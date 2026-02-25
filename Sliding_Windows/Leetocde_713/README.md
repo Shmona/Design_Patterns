@@ -1,4 +1,4 @@
-# Problem Statement 
+# Problem Statement :  Subarray Product Less Than K
 Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
 
 **Example 1:**
@@ -20,12 +20,15 @@ Given an array of integers nums and an integer k, return the number of contiguou
     Output: 0
  
 
-**Constraints:**
+## Constraints:
 - 1 <= nums.length <= 3 * 10^4
 - 1 <= nums[i] <= 1000
 - 0 <= k <= 10^6
 
 ## Approach 
+### Using Sliding windows TC = O(N) SC = O(1)
+- Solution Link : https://leetcode.com/problems/subarray-product-less-than-k/submissions/1906261050/
+  
 - Maintain a window [left, right] such that the product of all elements in this window is < k.
 - Expand right step by step, multiplying prod by nums[right].
 - If the product becomes >= k, shrink from the left (divide by nums[left] and move left forward) until the window again satisfies prod < k.
