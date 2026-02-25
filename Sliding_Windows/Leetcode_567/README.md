@@ -1,4 +1,4 @@
-# Problem Statement 
+# Problem Statement :  Permutation in String
 Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
 In other words, return true if one of s1's permutations is the substring of s2.
 
@@ -19,9 +19,14 @@ In other words, return true if one of s1's permutations is the substring of s2.
 - s1 and s2 consist of lowercase English letters.
 
 
-## Approach (Sliding Window + Frequency Count)
-- If a substring of s2 has exactly the same character frequencies as s1, then that substring is a permutation of s1.
-    -  So the task becomes:  “Does s2 contain a window of length |s1| whose character frequency matches s1?”
+## Approach :
+### Sliding Window + Frequency Count :  TC = O(N) SC = O(N)
+- Solution Link : https://leetcode.com/problems/permutation-in-string/submissions/1910088968/
+  
+- IDEA :    If a substring of s2 has exactly the same character frequencies as s1, then that substring is a permutation of s1.
+          - So the task becomes:  “Does s2 contain a window of length |s1| whose character frequency matches s1?”
+
+  
 - Count characters in s1
 - Maintain a frequency map (m1) of size 26 (for lowercase English letters).
 - Use a fixed-size sliding window on s2
