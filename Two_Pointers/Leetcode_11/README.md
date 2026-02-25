@@ -1,4 +1,4 @@
-# Problem Statement
+# Problem Statement : Container With Most Water
 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
 
 Find two lines that together with the x-axis form a container, such that the container contains the most water.
@@ -22,7 +22,10 @@ Notice that you may not slant the container.
 - 2 <= n <= 10^5
 - 0 <= height[i] <= 10^4
 
-## Approach : using two pointer , TC = O(N), SC = O(1)
+## Approach : 
+### using two pointer , TC = O(N), SC = O(1)
+- Solution Link :  https://leetcode.com/problems/container-with-most-water/submissions/1914902527/
+  
 - Traverse through the array from left to right ( left => 0 , right => n-1)
 - compute area = (right - left) * min(height[left], height[right])
 
