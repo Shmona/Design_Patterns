@@ -1,4 +1,4 @@
-# Problem statement
+# Problem statement  :   Maximum Average Subarray I
 Given an integer array nums consisting of n elements, and an integer k.
 
 Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
@@ -6,15 +6,12 @@ Find a contiguous subarray whose length is equal to k that has the maximum avera
 **Example 1:**
   
     Input: nums = [1,12,-5,-6,50,3], k = 4
-  
     Output: 12.75000
-  
     Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
 
 **Example 2:**
   
     Input: nums = [5], k = 1
-  
     Output: 5.00000
  
 ## Constraints:
@@ -24,6 +21,9 @@ Find a contiguous subarray whose length is equal to k that has the maximum avera
 
 
 ## Approach
+## Using Sliding windows :  TC = O(N) , SC = O(1)
+- Solution Link :  https://leetcode.com/problems/maximum-average-subarray-i/submissions/1905306449/
+  
 - Maintain a window of size k.
 - iterate over given array:
     - Add the current element to the sum.
