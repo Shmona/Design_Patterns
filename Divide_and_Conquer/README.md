@@ -36,18 +36,20 @@ Avoid Divide and Conquer when:
 ### 2. Multi‑way Divide and Conquer
 - The problem is divided into more than two subproblems.
 - Each subproblem is smaller and independent.
-
-  1. Binary Sear
+- Combine all results
+  
   **Examples**
   1. Strassen’s Matrix Multiplication (7 subproblems)
   2. Karatsuba Multiplication (3 subproblems)
-  3. Tournament Method (finding max/min)
+  3. Ternary Search (3-way split)
+  4. Tournament Method (finding max/min)
 
 ### 3. Decrease and Conquer
 - problem is reduced to a single smaller subproblem, not multiple.
 - Solve the smaller instance and extend the solution.
 
-  **Examples**ch
+  **Examples**
+  1. Binary Search
   2. Insertion Sort (recursive)
   3. Euclid’s GCD algorithm
 
@@ -77,6 +79,7 @@ Avoid Divide and Conquer when:
 ##  Leetcode Questions for Practice
 **🟢  Beginner / Warm-up**
 - **Leetcode 704** (Binary Search) : Classic divide array into halves
+- **Leetcode 169** (Majority Element) : D&C recurrence (majority in halves + combine)
 - **Leetcode 108** (Convert Sorted Array to Binary Search Tree) : Divide array, choose mid as root
 - **Leetcode 53** (Maximum Subarray (Divide & Conquer version)) : Left max, right max, crossing sum
 
@@ -84,12 +87,15 @@ Avoid Divide and Conquer when:
 - **Leetcode 215** (Kth Largest Element in an Array) : Quickselect (divide + partition)
 - **Leetcode 912** (Sort an Array) : Implement Merge Sort / Quick Sort
 - **Leetcode 240** (Search a 2D Matrix II) : Reduce search space
+- **Leetcode 241** (Different Ways to Add Parentheses( : split expression at operators (D&C + memoization)
 - **Leetcode 148** (Sort List) : Merge Sort on Linked List
 
 **🔴 Advanced**
 - **Leetcode 23** (Merge k Sorted Lists) : Divide lists, merge recursively
 - **Leetcode 4** (Median of Two Sorted Arrays) : Binary divide on partitions
 - **Leetcode 315** (Count of Smaller Numbers After Self) : Merge sort based counting
+- **Leetcode 327** (Count of Range Sum) : merge sort + prefix sums
+- **Leetcode 312** (Burst Balloons) : often DP, but can be framed as D&C + memoization
 
     
 
