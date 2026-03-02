@@ -87,7 +87,7 @@ Avoid Divide and Conquer when:
 - **Leetcode 215** (Kth Largest Element in an Array) : Quickselect (divide + partition)
 - **Leetcode 912** (Sort an Array) : Implement Merge Sort / Quick Sort
 - **Leetcode 240** (Search a 2D Matrix II) : Reduce search space
-- **Leetcode 241** (Different Ways to Add Parentheses( : split expression at operators (D&C + memoization)
+- **Leetcode 241** (Different Ways to Add Parentheses) : split expression at operators (D&C + memoization)
 - **Leetcode 148** (Sort List) : Merge Sort on Linked List
 
 **🔴 Advanced**
